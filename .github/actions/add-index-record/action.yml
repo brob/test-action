@@ -1,4 +1,4 @@
-name: 'Create or Update Algolia Index Record'
+`name: 'Create or Update Algolia Index Record'
 description: 'Create or update a record in an Algolia index'
 
 branding:
@@ -18,6 +18,9 @@ inputs:
   record:
     description: 'JSON record to write to this index (see https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/#algolia-records for details)'
     required: true
+outputs:
+  object_id: 
+    description: 'The object Id back from algolia'
 runs:
   using: 'node12'
   main: 'dist/index.js'
