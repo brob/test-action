@@ -1,4 +1,4 @@
-`name: 'Create or Update Algolia Index Record'
+name: 'Create or Update Algolia Index Record'
 description: 'Create or update a record in an Algolia index'
 
 branding:
