@@ -22,9 +22,12 @@ jobs:
           body: "This went to the index and has an object id of ${{ needs.add-index-record.outputs.object_id }}"
   add-index-record:
     runs-on: ubuntu-latest
+    outputs: 
+      object_id: ${{ steps.indexStep.outputs.object_id }}
     steps:
       - uses: actions/checkout@v2
       - name: Add to index
+        id: indexStep
         uses: ./.github/actions/add-index-record
         with:
           app_id: ${{ secrets.ALGOLIA_APP_ID }}
